@@ -291,7 +291,8 @@ def getFileData(date, meals, PHOTOS_DIR):
         timeStamp = getEXIF(fn, PHOTOS_DIR)['Exif.Image.DateTime']
         if timeStamp > dateRange[0] and timeStamp < dateRange[1]:
             with open(PHOTOS_DIR + fn, 'rb') as binaryImage:
-                print mealIndex, timeStamp
+                # for debugging
+                # print mealIndex, timeStamp
                 imageData = {
                     'name': meals[mealIndex][0]+'.jpeg',
                     'bits': xmlrpc_client.Binary(binaryImage.read()),
