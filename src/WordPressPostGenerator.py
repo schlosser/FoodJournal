@@ -3,7 +3,8 @@ File -- WordPressPostGenerator.py
 Creator -- Dan Schlosser
 UNI -- drs2161
 Date -- 11/21/12
-Description -- 
+Description -- Generates Food Journal WordPress blog posts from photos and 
+               and Excel file that contains the meal descriptions.
 
 """
 from wordpress_xmlrpc import Client, WordPressPost
