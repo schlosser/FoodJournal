@@ -168,8 +168,9 @@ def getNextDaysMeals(day, EXCEL_DIR, SHEET_NAME):
     if row == None: return (None, None) 
     meals = [(getMeals(EXCEL_DIR, SHEET_NAME)[ord(meal[1]) - ord('A')-1], 
               meal[3]) for meal in row]
+    
     meals = [(meal[0].encode('ascii'),
-              meal[1].encode('ascii')) for meal in meals if meal[1]!=None]
+              meal[1].encode('ascii')) for meal in meals if meal[1]!=None and meal[1].rstrip!='']
     return (meals,thisDay)
     
 def getNextRow(day, EXCEL_DIR, SHEET_NAME):
@@ -286,9 +287,11 @@ def getFileData(date, meals, PHOTOS_DIR):
     dateRange = getDateRange(date)
     images = []
     for fn in os.listdir(PHOTOS_DIR):
+        
         timeStamp = getEXIF(fn, PHOTOS_DIR)['Exif.Image.DateTime']
         if timeStamp > dateRange[0] and timeStamp < dateRange[1]:
             with open(PHOTOS_DIR + fn, 'rb') as binaryImage:
+                print mealIndex, timeStamp
                 imageData = {
                     'name': meals[mealIndex][0]+'.jpeg',
                     'bits': xmlrpc_client.Binary(binaryImage.read()),
