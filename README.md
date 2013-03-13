@@ -1,8 +1,8 @@
 Food Journal: WordPress Post Generator
 ======================================
 
-Food Journal is a Python script that allows users to create an
-automated WordPress blog with photos of the food they eat and breif
+WordPress Post Generator is a Python script that allows users to create an
+automated WordPress blog with photos of the food they eat and brief
 descriptions of the food.
 
 An example Food Journal WordPress site lives [here][1].
@@ -16,11 +16,11 @@ Installation Instructions
 2. Enter your meal contents in the `Food Journal.xlsx` file, with the contents
    of the meal separated by semicolons, like so: `Eggs with cheese; Bacon`.
    <em>Make sure to retain the excel file's format, with the rows and column
-   format as given.  Feel free to add more rows, but additional columns, or meal
-   types are not supported.</em>
-3. Update config.ini such that it points to your blog, photos and the Excel 
+   format as given.  Feel free to add more rows, but additional columns (meal
+   types) are not supported.</em>
+3. Update `config.ini` such that it points to your blog, photos and the Excel 
    file.
-4. Put some `.jpg` photos, taken on the day from the Excel file, in the Photo
+4. Put some `.jpg` photos, taken on the day from the Excel file, in the photos
    directory.  Do not worry about file names, they will be changed automatically 
    upon uploading.
 5. Run `$ python WordPressPostGenerator.py`.
