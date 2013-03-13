@@ -45,7 +45,6 @@ Known Bugs / Future Changes
 - Non-Excel file formats are not supported (Sorry!).
 - Incorrect formating of the Excel file will cause errors (Don't forget your
   semicolons!).
-- 
 
 
 [1]: http://dansfoodjournal.wordpress.com
